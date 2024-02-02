@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { colors } from "./Colors";
 
 export const GlobalStyles = createGlobalStyle`
     html, body, main, article, nav, aside, section,
@@ -21,25 +22,16 @@ export const GlobalStyles = createGlobalStyle`
     vertical-align: baseline;
     background: transparent;
     box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
   }
 
-  button,
-  select,
-  textarea,
-  input {
-    max-width: 100%;
-    color: inherit;
-    font-family: inherit;
-    line-height: inherit;
-    vertical-align: baseline;
+  html {
+    scroll-behavior: smooth;
   }
 
   button::-moz-focus-inner {
     border: 0;
-  }
-
-  a {
-    text-decoration: none;
   }
 
   img,
@@ -83,59 +75,56 @@ export const GlobalStyles = createGlobalStyle`
     line-height: 1.38;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin-bottom: 24px;
-    font-weight: 700;
-  }
-  h1 {
-    font-size: 28px;
-  }
-  h2 {
-    font-size: 24px;
-  }
-  h3 {
-    font-size: 20px;
-  }
-  h4 {
-    font-size: 16px;
-  }
-  h5 {
-    font-size: 12px;
-  }
-  h6 {
-    font-size: 12px;
-  }
-
   p {
-    margin-bottom: 16px;
-    line-height: 1.3;
+    font-size: 1.1rem;
   }
 
-  em {
-    font-style: oblique;
+  a {
+    color: ${colors.white};
+    transition: all 500ms ease;
+    font-size: 1.1rem;
+    text-decoration: none;
   }
 
-  strong {
-    font-weight: 500;
-  }
-  ol, ul {
-    margin-bottom: 16px;
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.1;
+    color: ${colors.black};
   }
 
-  ol li {
-    margin-right: 4px;
-    margin-left: 24px;
-    list-style-type: decimal
+  h1 {
+      font-size: 3rem;
   }
 
-  ul li {
-    margin-right: 4px;
-    margin-left: 24px;
-    list-style-type: '-'
+  h2 {
+      font-size: 2rem;
   }
+
+  h3 {
+      font-size: 1.6rem;
+  }
+
+  h4 {
+      font-size: 1.1rem;
+  }
+
+  h5 {
+      font-size: 0.95rem;
+  }
+
+  h6 {
+      font-size: 0.8rem;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #808080; 
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
 `;
