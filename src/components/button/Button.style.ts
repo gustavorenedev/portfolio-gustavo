@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { colors } from "../../styles/Colors";
 
-export const ElementButton = styled.button`
+export const ElementButton = styled.a`
   display: inline-block;
   width: fit-content;
   display: flex;

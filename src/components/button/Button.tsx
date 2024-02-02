@@ -2,14 +2,9 @@ import { ElementButton } from "./Button.style";
 
 interface ButtonProps {
   children: React.ReactNode;
-  link?: string;
-  onClick?: React.ReactEventHandler;
+  href?: string;
 }
 
-export const Button = ({ children, link, onClick, ...rest }: ButtonProps) => {
-  return (
-    <ElementButton link={link} onClick={onClick} {...rest}>
-      {children}
-    </ElementButton>
-  );
+export const Button = ({ children, href }: ButtonProps) => {
+  return <ElementButton href={href}>{children}</ElementButton>;
 };
