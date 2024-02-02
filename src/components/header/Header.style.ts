@@ -25,6 +25,10 @@ export const HeaderContainer = styled.div`
     text-align: center;
     margin: 0.6rem 0 2rem;
   }
+
+  h3 {
+    font-weight: 700;
+  }
 `;
 
 export const HeaderProfile = styled.div`
@@ -38,6 +42,17 @@ export const HeaderCta = styled.div`
   display: flex;
   align-items: center;
   gap: 1.2rem;
+
+  & > *:first-child {
+    background: ${colors.primary};
+    color: white;
+
+    &:hover {
+      background: transparent;
+      border-color: ${colors.primary};
+      color: ${colors.primary};
+    }
+  }
 `;
 
 export const HeaderSocials = styled.div`

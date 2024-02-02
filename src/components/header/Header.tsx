@@ -10,10 +10,12 @@ import {
 import HeaderPicture from "../../assets/pictureHeader.svg";
 import { Button } from "../button/Button";
 import data from "./data";
+import Navbar from "../navbar/Navbar";
 
 const Header = () => {
   return (
     <ElementHeader>
+      <Navbar />
       <HeaderContainer>
         <HeaderProfile>
           <HeaderImage src={HeaderPicture} alt="personal photo" />
@@ -21,12 +23,12 @@ const Header = () => {
         <h3>Gustavo René</h3>
         <p>
           Olá! Sou Gustavo René, desenvolvedor Full-Stack com especialidade em
-          React, Styled Components, C# e SQL . Ajudo pequenos negócios e
+          React, Styled Components, C# e SQL. Ajudo pequenos negócios e
           designers a colocarem em prática boas ideias.
         </p>
         <HeaderCta>
-          <Button link="#contact">Vamos conversar ?</Button>
-          <Button link="#portfolio">Meu trabalho</Button>
+          <Button href="#contact">Vamos conversar ?</Button>
+          <Button href="#portfolio">Meu trabalho</Button>
         </HeaderCta>
         <HeaderSocials>
           {data.map((item: any) => (
