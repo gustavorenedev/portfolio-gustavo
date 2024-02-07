@@ -5,7 +5,7 @@ const Layout = () => {
   return (
     <>
       <Header />
-      <div>Content</div>
+        <div>Content</div>
       <Footer />
     </>
   );
